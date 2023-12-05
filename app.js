@@ -1,7 +1,9 @@
+require('dotenv').config();
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
+
 
 const app = express();
 const port = 3000;
@@ -10,7 +12,7 @@ const db = new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"Authen",
-    password:"harsh@1527",
+    password: process.env.PASSWORD,
     port:5432
 });
 
