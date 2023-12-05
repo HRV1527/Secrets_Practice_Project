@@ -1,9 +1,9 @@
-require('dotenv').config();
+import dotenv from "dotenv";
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
-
+dotenv.config();
 
 const app = express();
 const port = 3000;
